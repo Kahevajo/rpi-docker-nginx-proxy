@@ -18,7 +18,7 @@ With a [companion container](https://github.com/Alexander-Krause/rpi-docker-lets
 
 ### Usage
 
-1. Clone this repository `$ git https://github.com/Kahevajo/rpi-docker-nginx-proxy.git`
+1. Clone this repository `$ git clone https://github.com/Kahevajo/rpi-docker-nginx-proxy.git`
 2. `$ cd rpi-docker-nginx-proxy`
 3. `$ docker build -t kahevajo/rpi1-nginx-proxy:latest .`
 4. `$ docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro kahevajo/rpi1-nginx-proxy:latest`
