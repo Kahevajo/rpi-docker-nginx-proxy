@@ -1,15 +1,16 @@
 # All credit goes to Jason Wilder and all the contributors of his original Github repository
+# Credit goes to Alexander Krause <akr@informatik.uni-kiel.de> for making it work on armhf.
 
-FROM arm32v7/nginx
-LABEL maintainer="Alexander Krause <akr@informatik.uni-kiel.de>"
+# This is a general fix for me that made it work on (I think?) RPI1 or arm32v6, no guarantees.
+FROM arm32v6/nginx:alpine
+LABEL maintainer="Henrik Johansson"
 
 # Install wget and install/updates certificates
-RUN apt-get update \
- && apt-get install -y -q --no-install-recommends \
-    ca-certificates \
-    wget \
- && apt-get clean \
- && rm -r /var/lib/apt/lists/*
+RUN apk update \
+  && apk add wget \
+  && apk add tar \
+  && apk add bash \
+  && rm -rf /var/cache/apk/*
 
 
 # Configure Nginx and apply fix for very long server names
