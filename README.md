@@ -1,5 +1,3 @@
-[![](https://img.shields.io/docker/pulls/alexanderkrause/rpi-nginx-proxy.svg)](https://hub.docker.com/r/alexanderkrause/rpi-nginx-proxy "Click to view the image on Docker Hub")
-
 This is a [**fork**](https://github.com/Kahevajo/rpi-docker-nginx-proxy) of a [**fork**](https://github.com/Alexander-Krause/rpi-docker-nginx-proxy), that enables usage on a arm32v6 architecture RPI 1 (I think?). Have a look at Jason Wilder's [original](https://github.com/jwilder/nginx-proxy) repository and README. The following part does not include all available options of the original project.
 
 The original fork did not work for my raspberry pi 1 with arm32v6 so I modified it a bit, changing to alpine as a base as the arm32v6 only releases on alpine.
@@ -10,11 +8,6 @@ All credit goes to Jason Wilder for the original and Alexander Krause for making
 
 ### Why do you want to use this?
 Reasons and examples for using a reverse proxy are discussed [by Jason Wilder](https://stackoverflow.com/a/366212/3250397) or [here](https://stackoverflow.com/a/366212/3250397).
-With a [companion container](https://github.com/Alexander-Krause/rpi-docker-letsencrypt-nginx-proxy-companion) for creating/renewing *Let's Encrypt certificates* automatically you can use it with a Raspberry Pi and DynDNS Provider to host and expose your dockerized (and now TLS-secured) applications. Examples:
-
-* [Nextcloud](https://github.com/nextcloud/docker) with [Passman](https://github.com/nextcloud/passman) extension and [MySQL](https://github.com/hypriot/rpi-mysql) (*tested*)
-* [Nginx](https://github.com/armhf-docker-library/nginx) hosting your web sites (*tested*)
-* Own Mailserver, e.g. [tomav/docker-mailserver](https://github.com/tomav/docker-mailserver), [hardware/mailserver](https://github.com/hardware/mailserver) or [Poste.io](https://poste.io/) (*not tested*)
 
 ### Usage
 
